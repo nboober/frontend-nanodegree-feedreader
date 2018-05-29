@@ -77,19 +77,14 @@ $(function() {
         * clicked and does it hide when clicked again.
         */
 
-        // it("changes visibility when clicked on", function(){
-        //   // $(".menu-icon-link").on('click', function() {
-        //   //     $('body').removeClass('menu-hidden');
-        //   //
-        //   //     expect($('.icon-list')).not.toHaveClass('menu-hidden');
-        //   // });
-        //   // $(".menu-icon-link").on('click', function() {
-        //   //     $('body').addClass('menu-hidden');
-        //   //
-        //   //     expect($('.icon-list')).toHaveClass('menu-hidden');
-        //   // });
-        //
-        // });
+        it("changes visibility when clicked on", function(){
+          $(".menu-icon-link").on('click', function() {
+              $('body').toggleClass('menu-hidden');
+          });
+          expect($('body').hasClass('menu-hidden')).toBe(true);
+
+        });
+
     });
 
     /* TODO: Write a new test suite named "Initial Entries" */
