@@ -78,10 +78,11 @@ $(function() {
         */
 
         it("changes visibility when clicked on", function(){
-          $(".menu-icon-link").on('click', function() {
-              $('body').toggleClass('menu-hidden');
-          });
-          expect($('body').hasClass('menu-hidden')).toBe(true);
+            $(".menu-icon-link").trigger('click');
+            expect($('body').hasClass('menu-hidden')).toBe(false);
+
+            $(".menu-icon-link").trigger('click');
+            expect($('body').hasClass('menu-hidden')).toBe(true);
 
         });
 
