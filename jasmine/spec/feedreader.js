@@ -114,17 +114,19 @@ $(function() {
   describe("New Feed Selection", function() {
 
     beforeEach(function(done){
-      google.setOnLoadCallback(init);
-      done();
-
+      loadFeed(0, function(){
+        //Old Feeds
+        oldFeed = $('.feed').html();
+        //Newer feeds
+        loadFeed(1, done);
+      });
     });
      /* TODO: Write a test that ensures when a new feed is loaded
       * by the loadFeed function that the content actually changes.
       * Remember, loadFeed() is asynchronous.
       */
-      it("is loaded", function(done){
-
-        done();
+      it("is loaded", function(){
+        expect($('.feed').html()).not.toBe(oldFeed);
       });
   });
 
