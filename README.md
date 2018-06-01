@@ -27,6 +27,11 @@ You will learn how to use Jasmine to write a number of tests against a pre-exist
 - Drag the index.html file into an open browser page
 - You can run all tests together or click on each individual test to test them all separately.
 
+## Dependencies
+
+- jQuery
+- Jasmine
+- HTML5
 
 # How will I complete this project?
 
