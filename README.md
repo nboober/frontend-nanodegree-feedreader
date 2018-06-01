@@ -20,6 +20,13 @@ You will learn how to use Jasmine to write a number of tests against a pre-exist
 * Writing effective tests requires analyzing multiple aspects of an application including the HTML, CSS and JavaScript - an extremely important skill when changing teams or joining a new company.
 * Good tests give you the ability to quickly analyze whether new code breaks an existing feature within your codebase, without having to manually test all of the functionality.
 
+## How to load up the Feed Reader Test file
+
+- Fork my repository at https://github.com/nboober/frontend-nanodegree-feedreader.git to your own.
+- Clone your repository to a local repository on your pc.
+- Drag the index.html file into an open browser page
+- You can run all tests together or click on each individual test to test them all separately.
+
 
 # How will I complete this project?
 
