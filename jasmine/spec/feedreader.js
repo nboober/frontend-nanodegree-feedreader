@@ -27,13 +27,10 @@ $(function() {
          * and that the URL is not empty.
          */
          it("url defined", function(){
-           for (let feed = 0; feed < allFeeds.length; feed++){
-    			      let indFeed = allFeeds[feed];
-    		          let keys = Object.keys(indFeed);
-                  expect(keys).toContain("url");
-                  let values = Object.values(indFeed);
-                  expect(values).toBeDefined();
-                }
+           allFeeds.forEach(function(feed) {
+    			      expect(feed.url).toBeDefined();
+                expect(feed.url.length).not.toBe(0);
+              });
          });
 
 
@@ -42,13 +39,10 @@ $(function() {
          * and that the name is not empty.
          */
          it("name defined", function(){
-           for (let feed = 0; feed < allFeeds.length; feed++){
-               let indFeed = allFeeds[feed];
-                 let keys = Object.keys(indFeed);
-                  expect(keys).toContain("name");
-                  let values = Object.values(indFeed);
-                  expect(values).toBeDefined();
-                }
+           allFeeds.forEach(function(feed) {
+    			      expect(feed.name).toBeDefined();
+                expect(feed.name.length).not.toBe(0);
+              });
          });
     });
 
@@ -98,7 +92,7 @@ $(function() {
     beforeEach(function(done){
       loadFeed(0, function(){
         //Old Feeds
-        let oldFeed = $('.feed').html();
+        oldFeed = $('.feed').html();
         //Newer feeds
         loadFeed(1, done);
       });
