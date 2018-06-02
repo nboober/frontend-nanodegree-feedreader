@@ -72,8 +72,7 @@ $(function() {
     describe("Initial Entries", function() {
 
       beforeEach(function(done){
-        google.setOnLoadCallback(init);
-        done();
+        loadFeed(0, done);
 
       });
 
@@ -82,7 +81,7 @@ $(function() {
        * a single .entry element within the .feed container.
        */
        it("is NOT empty", function(done){
-         expect(loadFeed.length).not.toBeLessThan(1);
+         expect($(".feed .entry").length).toBeGreaterThan(0);
          done();
        });
            });
